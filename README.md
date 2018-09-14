@@ -2,7 +2,7 @@
 
 Please submit your solution via NYU Classes.
 
-The deadline for Homework 2 is Friday, September 21, 11:55pm.
+The deadline for Homework 2 is Friday, September 21, 6pm.
 
 To obtain a local copy of this repository. Open a terminal at the
 location where you want the repository to reside and execute the
