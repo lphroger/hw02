@@ -116,12 +116,12 @@ Consider the following fragment of code in C:
 }
 ```
 
-a. Assume that each integer variable occupies 4 bytes and that the
+1. Assume that each integer variable occupies 4 bytes and that the
    shown variable declarations are the only variable declarations
    contained in this code. How much total space is required for the
    variables in this code when the program is executed?
 
-b. Recall that the values of local variables for each call to a
+2. Recall that the values of local variables for each call to a
    subroutine are stored on the stack in a stack frame (aka activation
    record). The compiler assigns to each local variable of the
    subroutine a static offset that determines the variable's location
@@ -174,7 +174,7 @@ void delete_list(list_node* L) {
 }
 ```
 
-a. Accustomed to Java, new team member Brad includes the following
+1. Accustomed to Java, new team member Brad includes the following
    code in the main loop of his program:
 
    ```c
@@ -190,7 +190,7 @@ a. Accustomed to Java, new team member Brad includes the following
    Sadly, after running for a while, Brad's program always runs out of
    memory and crashes. Explain what's going wrong.
 
-b. After Janet patiently explains the problem to him, Brad gives it another
+2. After Janet patiently explains the problem to him, Brad gives it another
    try:
 
    ```c
