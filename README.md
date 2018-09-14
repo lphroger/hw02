@@ -44,10 +44,11 @@ Suppose this was code for a language with the declaration-order rules
 of C (but with nested subroutines) - that is, names must be declared
 before use, and the scope of a name extends from its declaration
 through the end of the block. At each print statement, indicate which
-declarations of `a` and `b` are in scope. What does the program print
-(or will the compiler identify static semantic errors)? Repeat the
-exercise for the declaration-order rules of C# (names must be declared
-before use, but the scope of a name is the entire block in which it is
+declarations of `a` and `b` are in the static scope. What does the
+program print assuming static scoping (or will the compiler identify
+static semantic errors)?  Repeat the exercise for the
+declaration-order rules of C# (names must be declared before use, but
+the static scope of a name is the entire block in which it is
 declared).
 
 ## Problem 2 (4 Points)
@@ -120,9 +121,19 @@ a) Assume that each integer variable occupies 4 bytes and that the
    contained in this code. How much total space is required for the
    variables in this code when the program is executed?
 
-b) Describe an algorithm that a compiler could use to assign stack
-   frame offsets to the variables of arbitrary nested blocks, in a way
-   that minimizes the total space required.
+b) Recall that the values of local variables for each call to a
+   subroutine are stored on the stack in a stack frame (aka activation
+   record). The compiler assigns to each local variable of the
+   subroutine a static offset that determines the variable's location
+   in the stack frame relative to the stack pointer that points to the
+   beginning of the stack frame. Thus during the execution of the
+   call, the value of each local variable can be accessed by adding
+   its fixed static offset to the current value of the stack pointer.
+   
+   Describe an algorithm that a compiler could use to assign stack
+   frame offsets to the variables of arbitrary nested blocks of a
+   subroutine, in a way that minimizes the total space required to
+   store the values of these variables in the stack frame.
 
 ## Problem 4 (6 Points)
 
