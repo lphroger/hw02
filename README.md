@@ -2,7 +2,7 @@
 
 Please submit your solution via NYU Classes.
 
-The deadline for Homework 2 is September 21, 11:55pm.
+The deadline for Homework 2 is Friday, September 21, 11:55pm.
 
 To obtain a local copy of this repository. Open a terminal at the
 location where you want the repository to reside and execute the
@@ -16,20 +16,20 @@ git clone https://github.com/nyu-pl-fa18/hw02.git
 
 Consider the following pseudo code.
 
-```modular-3
- 1: procedure main () {
- 2:   var a: Int := 1
- 3:   var b: Int := 2
+```scala
+ 1: def main () {
+ 2:   var a: Int = 1
+ 3:   var b: Int = 2
 
- 4:   procedure middle () {
- 5:     var b: Int := a
+ 4:   def middle () {
+ 5:     var b: Int = a
 
- 6:     procedure inner () {
+ 6:     def inner () {
  7:       println(a); println(b)
- 8:       var a: Int := 3
+ 8:       var a: Int = 3
  9:     }
        
-10:     var a: Int := 3
+10:     var a: Int = 3
 
 11:     inner()
 12:     println(a); println(b)
@@ -45,39 +45,39 @@ of C (but with nested subroutines) - that is, names must be declared
 before use, and the scope of a name extends from its declaration
 through the end of the block. At each print statement, indicate which
 declarations of `a` and `b` are in the static scope. What does the
-program print assuming static scoping (or will the compiler identify
-static semantic errors)?  Repeat the exercise for the
-declaration-order rules of C# (names must be declared before use, but
-the static scope of a name is the entire block in which it is
+program print when `main` is executed assuming static scoping (or will
+the compiler identify static semantic errors)?  Repeat the exercise
+for the declaration-order rules of C# (names must be declared before
+use, but the static scope of a name is the entire block in which it is
 declared).
 
 ## Problem 2 (4 Points)
 
 Consider the following pseudo code:
 
-```pascal
+```scala
 var x: Int // global variable
 
-procedure set_x(n: Int) {
-  x := n
+def set_x(n: Int) {
+  x = n
 }
 
-procedure print_x () {
+def print_x () {
   println(x)
 }
 
-procedure first () {
+def first () {
   set_x(1)
   print_x()
 }
 
-procedure second () {
+def second () {
   var x: Int
   set x(2)
   print_x()
 }
 
-procedure main () {
+def main () {
   set_x(0)
   first()
   print_x()
@@ -86,8 +86,8 @@ procedure main () {
 }
 ```
 
-What does this program print if the language uses static scoping? What does
-it print with dynamic scoping? Why?
+What does this program print when `main` is executed if the language
+uses static scoping? What does it print with dynamic scoping? Why?
 
 
 ## Problem 3 (6 Points)
@@ -116,12 +116,12 @@ Consider the following fragment of code in C:
 }
 ```
 
-a) Assume that each integer variable occupies 4 bytes and that the
+a. Assume that each integer variable occupies 4 bytes and that the
    shown variable declarations are the only variable declarations
    contained in this code. How much total space is required for the
    variables in this code when the program is executed?
 
-b) Recall that the values of local variables for each call to a
+b. Recall that the values of local variables for each call to a
    subroutine are stored on the stack in a stack frame (aka activation
    record). The compiler assigns to each local variable of the
    subroutine a static offset that determines the variable's location
@@ -174,7 +174,7 @@ void delete_list(list_node* L) {
 }
 ```
 
-a) Accustomed to Java, new team member Brad includes the following
+a. Accustomed to Java, new team member Brad includes the following
    code in the main loop of his program:
 
    ```c
@@ -190,7 +190,7 @@ a) Accustomed to Java, new team member Brad includes the following
    Sadly, after running for a while, Brad's program always runs out of
    memory and crashes. Explain what's going wrong.
 
-b) After Janet patiently explains the problem to him, Brad gives it another
+b. After Janet patiently explains the problem to him, Brad gives it another
    try:
 
    ```c
