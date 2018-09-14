@@ -16,7 +16,7 @@ git clone https://github.com/nyu-pl-fa18/hw02.git
 
 Consider the following pseudo code.
 
-```pascal
+```modular-3
  1: procedure main () {
  2:   var a: Int := 1
  3:   var b: Int := 2
