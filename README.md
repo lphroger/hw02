@@ -125,10 +125,10 @@ Consider the following fragment of code in C:
    subroutine are stored on the stack in a stack frame (aka activation
    record). The compiler assigns to each local variable of the
    subroutine a static offset that determines the variable's location
-   in the stack frame relative to the stack pointer that points to the
+   in the stack frame relative to the frame pointer that points to the
    beginning of the stack frame. Thus during the execution of the
    call, the value of each local variable can be accessed by adding
-   its fixed static offset to the current value of the stack pointer.
+   its fixed static offset to the current value of the frame pointer.
    
    Describe an algorithm that a compiler could use to assign stack
    frame offsets to the variables of arbitrary nested blocks of a
