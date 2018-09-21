@@ -73,7 +73,7 @@ def first () {
 
 def second () {
   var x: Int
-  set x(2)
+  set_x(2)
   print_x()
 }
 
